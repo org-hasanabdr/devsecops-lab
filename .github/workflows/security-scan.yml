@@ -181,7 +181,7 @@ jobs:
           category: dependency-check
 
       - name: Upload Dependency-Check report, log and SARIF
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
           name: dependency-check-report-${{ github.sha }}
@@ -266,7 +266,7 @@ jobs:
           category: trivy-fs
 
       - name: Upload Trivy SARIF reports
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
           name: trivy-reports-${{ github.sha }}
@@ -363,7 +363,7 @@ jobs:
           ls -la "${{ github.workspace }}/zap-reports"
 
       - name: Upload ZAP reports
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
           name: zap-report-${{ github.sha }}
